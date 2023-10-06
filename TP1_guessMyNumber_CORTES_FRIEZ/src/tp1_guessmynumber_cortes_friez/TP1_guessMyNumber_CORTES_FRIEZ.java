@@ -23,25 +23,81 @@ public class TP1_guessMyNumber_CORTES_FRIEZ {
         Scanner sc = new Scanner(System.in);
         
         int n = generateurAleat.nextInt(100);
-        
-        byte victoire = 0;
+        int limite = 0;
+        int alea;
+        byte fin = 0;
         int i=1;
-        while(victoire ==0){
+        byte indications = 1;
+        System.out.println("Chosissez votre difficulté :");
+        System.out.println("Facile");
+        System.out.println("Moyen");
+        System.out.println("Difficile");
+        System.out.println("CAUCHEMAR");
+                
+        int dif = sc.nextInt();
+        if (dif==1){
+            limite = 15;
+        }
+        if (dif==2){
+            limite = 10;
+        }
+        if (dif==3){
+            limite = 5;
+            indications = 0;
+        }
+        if (dif==4){
+            limite = 5;
+            indications = 0;
+        }
+        while(fin ==0){
             System.out.println("Tentative "+i);
             System.out.println("Entrez une valeur:");
             int user = sc.nextInt();
+            
+            if (indications==1){
+                    if (-5<n-user && n-user<5){
+                        System.out.println("Tres proche");
+                    }
+                }
+            
             if (user>n){
+                if (dif == 4){
+                    alea = generateurAleat.nextInt(100);
+                    if (alea>70){
+                        System.out.println("Trop petit !");
+                    }
+                    else{
+                        System.out.println("Trop grand");
+                    }
+                }
+                else{
                 System.out.println("Trop grand");
+                }
             }
             if (user<n){
+                if (dif == 4){
+                    alea = generateurAleat.nextInt(100);
+                    if (alea>70){
+                        System.out.println("Trop grand !");
+                    }
+                    else{
+                        System.out.println("Trop petit");
+                    }
+                }
+                else{
                 System.out.println("Trop petit");
             }
             if (user==n){
-                System.out.println("Victoire !");
-                victoire = 1;
+                System.out.println("Victoire ! Apres "+i+" tentatives.");
+                fin = 1;
+                }
             }
             i = i+1;
-            if (i==limite)
+            if (i>limite){
+                System.out.println("Defaite la limite de "+limite+" tentatives a ete excedee");
+                fin = 1;
+            }
+            
         }
     }
-}
+}       
