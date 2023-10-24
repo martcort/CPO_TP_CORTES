@@ -36,8 +36,8 @@ public class Convertisseur {
          double tKelvin = CelciusVersKelvin(FarenheitVersCelcius(tFarenheit));
          return tKelvin;
     }
-    @Override
+@Override
 public String toString() {
-return "nb de conversions" + nbConversions;
+return "Le nombre de conversions est de " + nbConversions;
 }
 }

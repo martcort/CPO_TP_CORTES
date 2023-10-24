@@ -19,32 +19,47 @@ public class TP2_convertisseurObjet_CORTES_FRIEZ {
      */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        Convertisseur convert = new Convertisseur();
+        int i = 0;
         System.out.println("Bonjour !!");
-        System.out.println("Saisissez une température à convertir ci-dessous");
+        while(i <1){
+        System.out.println(" *-* \nSaisissez une temperature a convertir ci-dessous");
         double t = sc.nextDouble();
         System.out.println("Saisissez la conversion que vous souhaitez effectuer:");
-        System.out.println("/n1) De Celcius vers Kelvin/n2) De Kelvin vers Celcius/n3) De Farenheit vers Celcius/n4) De Celcius vers Farenheit/n5) De Kelvin vers Farenheit/n6) De Farenheit vers Kelvin");
+        System.out.println("1) De Celcius vers Kelvin\n2) De Kelvin vers Celcius\n3) De Farenheit vers Celcius\n4) De Celcius vers Farenheit\n5) De Kelvin vers Farenheit\n6) De Farenheit vers Kelvin");
         int rep = sc.nextInt();
         if (rep==1){
             System.out.println(Convertisseur.CelciusVersKelvin(t));
-            Convertisseur.nbConversions +=1;
+            convert.nbConversions +=1;
+            System.out.println(convert);
         }
         if (rep==2){
             System.out.println(Convertisseur.KelvinVersCelcius(t));
+            convert.nbConversions +=1;
+            System.out.println(convert);
         }
         if (rep==3){
             System.out.println(Convertisseur.FarenheitVersCelcius(t));
+            convert.nbConversions +=1;
+            System.out.println(convert);
         }
         if (rep==4){
             System.out.println(Convertisseur.CelciusVersFarenheit(t));
+            convert.nbConversions +=1;
+            System.out.println(convert);
         }
         if (rep==5){
             System.out.println(Convertisseur.KelvinVersFarenheit(t));
+            convert.nbConversions +=1;
+            System.out.println(convert);
         }
         if (rep==6){
             System.out.println(Convertisseur.FarenheitVersKelvin(t));
+            convert.nbConversions +=1;
+            System.out.println(convert);
         }
         
     }
     
+}
 }
