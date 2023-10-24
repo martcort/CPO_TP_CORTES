@@ -2,6 +2,8 @@
  * TP3 - Héritage, classe abstraite et interface 
  * Crée le 23 Oct. 2023
  */
+
+// Importation des éléments dans les différents dossier du package
 package tp3_heroic_fantasy_cortes;
 import Personnages.Guerrier;
 import Personnages.Magicien;
@@ -36,7 +38,7 @@ public class TP3_Heroic_Fantasy_CORTES {
         
         System.out.println(excalibur);
         
-        // Création d'une arraylist pour stocker les armes
+        // Création d'une arraylist pour stocker les armes (demandée au tout début du tp, inutile après)
         ArrayList<Arme> armes;
         armes = new ArrayList<>();
         
@@ -48,30 +50,34 @@ public class TP3_Heroic_Fantasy_CORTES {
         armes.add(charme);
         armes.add(marche);
         
-        // Création du magicien
-        Magicien gandalf = new Magicien("Gandalf",65, true);
-        
-        // Création du guerrier
-        Guerrier conan = new Guerrier("Conan",78,false);
-        conan.ajoutarme(marche);
-        conan.ajoutarme(joyeuse);
-        conan.ajoutarme(durandal);
-        conan.equiper("La Joyeuse");
-        
-        gandalf.ajoutarme(charme);
+        // Création du magicien, ajout de ses armes et équipement
+        Magicien gandalf = new Magicien("Gandalf",65, false);
         gandalf.ajoutarme(chene);
-        gandalf.ajoutarme(durandal);
-        gandalf.equiper("Charme");
-        
-        System.out.println(gandalf.predilection());
-        System.out.println(conan.predilection());
-        
-        System.out.println(gandalf.specs());
-        System.out.println(conan.specs());
+        gandalf.ajoutarme(excalibur);
+        gandalf.equiper("Chêne");
         
         
         
+        // Création du guerrier, ajout de ses armes et équipement
+        Guerrier conan = new Guerrier("Conan",78,true);
+        conan.ajoutarme(charme);
+        conan.ajoutarme(durandal);
+        conan.equiper("Durandal");
         
+        // Gandalf attaque Conan !!!
+        
+       gandalf.attaquer(conan);
+       System.out.println(conan.specs()); // Affichage de leurs stats
+       System.out.println(gandalf.specs());
+       
+       conan.attaquer(gandalf);
+       System.out.println(conan.specs()); // Affichage de leurs stats
+       System.out.println(gandalf.specs());
+       
+       gandalf.estVivant();// On vérifie si nos concernés sont en vie 
+       conan.estVivant();
+       
+       conan.attaquer(gandalf);
+       gandalf.estVivant();     
     }
-    
 }

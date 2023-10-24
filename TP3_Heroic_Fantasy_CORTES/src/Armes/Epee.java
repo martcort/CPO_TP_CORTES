@@ -12,15 +12,15 @@ package Armes;
 public class Epee extends Arme{
     private int finesse;
 
-    public Epee(String n, int niv, int f) {
-        super(n, niv);
-        finesse = f;
+    public Epee(String n, int niv, int sp) { // Constructeur
+        super(n, niv,sp);
+        finesse = sp;
     }
-    public String gettype(){
-        return "epee";
+    public int getfinesse(){ // Retourne la finesse de l'épée
+        return finesse;
     }
 @Override
-public String toString(){
+public String toString(){ // On redéfinit le toString déjà redéfini de la classe arme pour l'adapter au modèle de l'épée
     return super.toString()+", cette epee a une finesse de "+finesse;       
 }
 }

@@ -12,15 +12,15 @@ package Armes;
 public class Baton extends Arme{
     private int age;
 
-    public Baton(String n, int niv, int a) {
-        super(n, niv);
-        age = a;
+    public Baton(String n, int niv, int sp) { // COntructeur
+        super(n, niv, sp);
+        age = sp;
     }
-        public String gettype(){
-        return "baton";
+    public int getage(){ // Renvoie l'age du baton
+        return age;
     }
 @Override
-public String toString(){
+public String toString(){ // Redefinition du toString de la classe arme (super), pour y ajouter des infos relatives au fait que ce soit un baton
     return super.toString()+", ce baton a un age de"+age+"ans";       
 }
 }

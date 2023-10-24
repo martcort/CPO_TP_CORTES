@@ -12,12 +12,12 @@ package Personnages;
 public class Guerrier extends Personnage{
     private boolean cheval;
 
-    public void modifcheval(boolean i){
+    public void modifcheval(boolean i){ // Permet de modifier la variable a cheval
         cheval = i;
     }
-    public Guerrier(String n, int v, boolean c) {
-        super(n, v);
-        cheval = c;
+    public Guerrier(String n, int v, boolean e) { // Contructeur
+        super(n, v, e);
+        cheval = e;
         
         
     }

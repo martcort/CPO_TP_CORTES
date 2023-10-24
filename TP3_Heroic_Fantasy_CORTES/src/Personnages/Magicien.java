@@ -11,13 +11,13 @@ import Personnages.Personnage;
  *
  * @author marti
  */
-public class Magicien extends Personnage{
+public class Magicien extends Personnage{ // Constructeur
     private boolean confirmed;
-    public Magicien(String n, int v, boolean conf) {
-        super(n, v);
-        confirmed = conf;   
+    public Magicien(String n, int v,boolean e) {
+        super(n, v,e);
+        confirmed = e;   
     }
-    public void modifconf(boolean i){
+    public void modifconf(boolean i){ // Permet de modifier la valeur confirmé 
         confirmed =i;
     }
 
