@@ -7,9 +7,11 @@
 package tp2_manip_cortes_friez;
 
 /**
- *
+ *    
+
  * @author marti
  */
 public class Tartiflette {
-    
+    public Tartiflette(int nbCalories){
+    }
 }

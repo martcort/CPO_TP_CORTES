@@ -5,11 +5,14 @@
  *  Martin CORTES, Elisa FRIEZ
  */
 package tp2_manip_cortes_friez;
-
+    
 /**
  *
  * @author marti
  */
 public class Moussaka {
-    
+    int nbCalories;
+    public Moussaka(int n){
+        nbCalories = n;
+    }
 }
