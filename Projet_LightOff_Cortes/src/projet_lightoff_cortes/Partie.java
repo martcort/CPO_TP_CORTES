@@ -68,10 +68,11 @@ public class Partie {
     public void lancerPartie(){
         Scanner scan = new Scanner(System.in);
         boolean etatPartie = false;
-        int coups = 0;
+        int coups = 1;
         System.out.println(grille);
         
         while(etatPartie==false){
+            System.out.println("Coup numero "+coups+" , a vous de jouer !   ");
             System.out.println("Entrez votre colonne/ligne :");
             String texte = scan.next();
             
@@ -124,6 +125,6 @@ public class Partie {
             }
             
         }
-        System.out.println("Partie terminee ! (en "+coups+" coups)");
+        System.out.println("Partie terminee ! (en "+(coups-1)+" coups)");
     }
 }
